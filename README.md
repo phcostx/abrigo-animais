@@ -16,9 +16,9 @@ A API permite as seguintes operações:
 ## Tecnologias Utilizadas
 
 - **Java 17**
-- **Spring Boot 2.7.x**
+- **Spring Boot 3.4.5**
 - **JPA (Hibernate)**
-- **Banco de dados H2** (ou outro banco de dados de sua escolha)
+- **Banco de dados PostgreSQL** 
 - **RESTful API**
 - **Maven** para gerenciamento de dependências
 
@@ -28,9 +28,9 @@ A API permite as seguintes operações:
 
 Antes de começar, você precisa ter as seguintes ferramentas instaladas:
 
-- **Java 17** ou superior
+- **Java 17**
 - **Maven** para gerenciar as dependências
-- **IDE** (como IntelliJ IDEA, Eclipse ou VSCode) para editar o código
+
 
 ### Passos para executar:
 
@@ -88,17 +88,3 @@ Aqui estão os endpoints disponíveis para a interação com a API:
   "sexo": "Macho"
 }
 ```
-
-## Contribuindo
-
-Se você quiser contribuir para este projeto, siga os seguintes passos:
-
-1. Faça um fork do repositório.
-2. Crie uma branch para a sua feature (`git checkout -b feature/novo-recurso`).
-3. Faça suas alterações e commit (`git commit -m 'Adicionando novo recurso'`).
-4. Envie a branch para o repositório remoto (`git push origin feature/novo-recurso`).
-5. Abra um Pull Request para a branch `main`.
-
-## Licença
-
-Distribuído sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
