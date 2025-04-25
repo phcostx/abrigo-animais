@@ -1,9 +1,13 @@
 
-# Abrigo de Animais
+# Abrigo de Pets 🐶🐱
 
 Este projeto é uma **API RESTful** desenvolvida com **Spring Boot** que permite o gerenciamento de um abrigo de animais, onde você pode realizar operações como **criar**, **atualizar**, **deletar** e **consultar** informações sobre os pets.
 
-## Funcionalidades
+# Objetivo 🔍
+
+O principal objetivo deste projeto é registrar minha evolução nos estudos em Java, Spring Boot, Docker e outras tecnologias que forem sendo incorporadas ao longo do tempo.
+
+## Funcionalidades 
 
 A API permite as seguintes operações:
 
@@ -13,7 +17,7 @@ A API permite as seguintes operações:
 - **Atualizar um pet** (PUT): Atualizar as informações de um pet existente.
 - **Excluir um pet** (DELETE): Deletar um pet do abrigo.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas 
 
 - **Java 17**
 - **Spring Boot 3.4.5**
@@ -21,6 +25,7 @@ A API permite as seguintes operações:
 - **Banco de dados PostgreSQL** 
 - **RESTful API**
 - **Maven** para gerenciamento de dependências
+- **Docker** 
 
 ## Como Rodar o Projeto
 
@@ -30,20 +35,45 @@ Antes de começar, você precisa ter as seguintes ferramentas instaladas:
 
 - **Java 17**
 - **Maven** para gerenciar as dependências
+- **Docker** se for usar a versão containerizada
 
-
-### Passos para executar:
+### Rodando o Projeto com Docker
+Caso prefira rodar o projeto em um container Docker, siga as etapas abaixo:
 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/phcostx/abrigo-animais.git
+   git clone https://github.com/phcostx/abrigo-pets.git
    ```
 
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd abrigo-animais
+   cd abrigo-pets
+   ```
+
+3. Construa a imagem Docker:
+
+   ```bash
+   docker build -t abrigo-pets
+   ```
+
+4. A aplicação estará rodando em `http://localhost:8080`.
+
+
+
+### Passos para executar o projeto localmente:
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/phcostx/abrigo-pets.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd abrigo-pets
    ```
 
 3. Compile e execute o projeto com o Maven:
