@@ -1,5 +1,5 @@
 
-# Abrigo de Animais
+# Abrigo de Pets
 
 Este projeto é uma **API RESTful** desenvolvida com **Spring Boot** que permite o gerenciamento de um abrigo de animais, onde você pode realizar operações como **criar**, **atualizar**, **deletar** e **consultar** informações sobre os pets.
 
