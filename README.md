@@ -29,7 +29,7 @@ A API permite as seguintes operações:
 
 ## Como Rodar o Projeto
 
-### Pré-requisitos
+### Pré-requisitos 🚀
 
 Antes de começar, você precisa ter as seguintes ferramentas instaladas:
 
