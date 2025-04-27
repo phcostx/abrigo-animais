@@ -24,7 +24,7 @@ public class PetService {
 
     public Pet buscarPorId(Long id) {
         return petRepository.findById(id)
-                .orElseThrow(() -> new RecursoNaoEncontradoException("Pet com ID " + id + " não encontrao"));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Pet com ID " + id + " não encontrado"));
     }
 
     public Pet salvarPet(Pet pet) {

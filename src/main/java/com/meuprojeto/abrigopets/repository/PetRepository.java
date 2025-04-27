@@ -1,9 +1,10 @@
-package com.meuprojeto.abrigopets.repository;
+    package com.meuprojeto.abrigopets.repository;
 
-import com.meuprojeto.abrigopets.model.Pet;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+    import com.meuprojeto.abrigopets.model.Pet;
+    import org.springframework.data.jpa.repository.JpaRepository;
+    import org.springframework.stereotype.Repository;
 
-public interface PetRepository extends JpaRepository<Pet, Long> {
+    @Repository
+    public interface PetRepository extends JpaRepository<Pet, Long> {
 
-}
+    }
