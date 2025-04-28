@@ -3,8 +3,10 @@ package com.meuprojeto.abrigopets.service;
 import com.meuprojeto.abrigopets.exceptions.RecursoNaoEncontradoException;
 import com.meuprojeto.abrigopets.model.Pet;
 import com.meuprojeto.abrigopets.repository.PetRepository;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import com.meuprojeto.abrigopets.exceptions.RecursoNaoEncontradoException;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +15,9 @@ import java.util.Optional;
 public class PetService {
 
     private final PetRepository petRepository;
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
     public PetService(PetRepository petRepository) {
         this.petRepository = petRepository;
@@ -48,6 +53,9 @@ public class PetService {
         pet.setNome(petDetails.getNome());
         pet.setIdade(petDetails.getIdade());
         pet.setRaca(petDetails.getRaca());
+        pet.setTipo(petDetails.getTipo());
+        pet.setTipo(petDetails.getTipo());
+        pet.setStatus(petDetails.getStatus());
 
         return  petRepository.save(pet);
         } else {

@@ -19,7 +19,7 @@ public class PetController {
 
     @GetMapping
     public List<Pet> listarPets(){
-       return this.petService.listarPets();
+       return petService.listarPets();
     }
 
     @GetMapping("/{id}")
@@ -48,4 +48,13 @@ public class PetController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @DeleteMapping("/resetar")
+    public ResponseEntity<Void> resetarPets() {
+        petService.deletarTodosPets();
+        return ResponseEntity.noContent().build();
+    }
+
+
+
 }
