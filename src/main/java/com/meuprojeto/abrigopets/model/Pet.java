@@ -1,46 +1,39 @@
 package com.meuprojeto.abrigopets.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name ="pets")
 public class Pet {
 
     public enum Sexo {
-        M, F
-    }
-
-    public enum Status {
-        ADOTADO,
-        NAO_ADOTADO
+        MACHO,
+        FEMEA
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
-    @Column(nullable = false, length = 25)
     private String nome;
-
-    @Column(nullable = false, length = 25)
     private String tipo;
-
+    
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 1)
+    @Column(name = "sexo", columnDefinition = "varchar(10) CHECK (sexo IN ('MACHO', 'FEMEA'))")
     private Sexo sexo;
-
-    @Column(nullable = false, length = 100)
+    
     private String idade;
-
-    @Column(nullable = false, length = 25)
     private String raca;
+    private String status;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Status status;
-
-    public Pet(Long id, String nome, String tipo, Sexo sexo, String idade, String raca, Status status) {
+    public Pet(Long id, String nome, String tipo, Sexo sexo, String idade, String raca, String status) {
         this.id = id;
         this.nome = nome;
         this.tipo = tipo;
@@ -51,7 +44,6 @@ public class Pet {
     }
 
     public Pet() {
-
     }
 
     public Long getId() {
@@ -102,11 +94,11 @@ public class Pet {
         this.raca = raca;
     }
 
-    public Status getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }
